@@ -39,3 +39,8 @@ To return all tweets containing the word "yellow":
 To return all tweets containing the words "yellow" and "jackets":
 
 ```t = tweets.find({"words" : {"$in" : ["yellow", "jackets"]}})```
+
+Once you find your set of tweets, to iterate through the cursor:
+
+<pre><code>for tweet in t:
+  print(tweet)</code></pre>
