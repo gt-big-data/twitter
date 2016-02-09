@@ -10,6 +10,8 @@ Using Retina News' database of tweets to run various analysis.
 
 ### PyMongo
 
+Run the following command in your terminal window, after downloading Python:
+
 ```pip install pymongo```
 
 ## Accessing Database of tweets
