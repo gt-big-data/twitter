@@ -22,3 +22,18 @@ client = MongoClient('mongodb://db.retinanews.net')
 db = client.big_data
 tweets = db.tweet</code></pre>
 
+## Querying Tweets
+
+Examine the [MongoDB documentation](https://docs.mongodb.org/getting-started/python/query/)
+
+To return a random tweet:
+
+```t = tweets.find_one()```
+
+To return all tweets containing the word "yellow":
+
+```t = tweets.find({"words" : {"$in" : ["yellow"]}})```
+
+To return all tweets containing the words "yellow" and "jackets":
+
+```t = tweets.find({"words" : {"$in" : ["yellow", "jackets"]}})```
