@@ -14,7 +14,7 @@ Run the following command in your terminal window, after downloading Python:
 
 ```pip install pymongo```
 
-## Accessing Database of tweets
+## Accessing Database of Tweets
 
 Open a new python file and start with
 
@@ -36,7 +36,7 @@ To return all tweets containing the word "yellow":
 
 ```t = tweets.find({"words" : {"$in" : ["yellow"]}})```
 
-To return all tweets containing the words "yellow" and "jackets":
+To return all tweets containing the word "yellow" or "jackets":
 
 ```t = tweets.find({"words" : {"$in" : ["yellow", "jackets"]}})```
 
