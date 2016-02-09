@@ -6,7 +6,7 @@ Using Retina News' database of tweets to run various analysis.
 
 ### Python
 
-[Download Python 3](https://www.python.org/downloads/)
+[Download Python 2](https://www.python.org/downloads/)
 
 ### PyMongo
 
