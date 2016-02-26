@@ -34,13 +34,29 @@ To return a random tweet:
 
 To return all tweets containing the word "yellow":
 
-```t = tweets.find({"words" : {"$in" : ["yellow"]}})```
+```t = tweets.find({"keywords" : {"$in" : ["yellow"]}})```
 
 To return all tweets containing the word "yellow" or "jackets":
 
-```t = tweets.find({"words" : {"$in" : ["yellow", "jackets"]}})```
+```t = tweets.find({"keywords" : {"$in" : ["yellow", "jackets"]}})```
 
 Once you find your set of tweets, to iterate through the cursor:
 
 <pre><code>for tweet in t:
   print(tweet)</code></pre>
+
+## Tweet Entities
+
+'text': original text of tweet (str format)
+'author_id': author's id in twitter's system (str format)
+'author_name': author's name (str format)
+'author_followers_count': how many people follow the author (int format)
+'timestamp': when is the tweet created (int format) // we started to use new crawler since 1456524600
+'lon': longitude of tweet (int format)
+'lat': latitude of tweet (int format)
+'words': all words in text (list of str)
+'keywords': keywords in text (list of str)
+'hashtags': hashtags in text (list of str)
+'mentions_id': ids of people being mentioned in tweet (list of str)
+'mentions_name': names of people being mentioned in tweet (list of str)
+'urls': urls in text (list of str)
