@@ -9,13 +9,6 @@ import time
 # @note get_clusters(5000,1) takes about 1 second, get_clusters(10000,3) takes about 4 seconds, get_clusters(5000,6) takes about 80 seconds
 
 def get_clusters(followers=3000, hours=1):
-    # use create_index to timestamp on database before matching
-    # $unwind keywords
-    # $group by keywords
-    #     {'_id': 'obama', 'tweetIDs':['101','203','401'], 'count': 20}
-    # then build a dictionary containing
-    #     {'key': '101, 203', 'value': 1}
-    # so now we have edges
     graph = Graph()
     match1 = {'$match':{'timestamp':{'$gte':time.time()-3600*hours}, 'author_followers_count':{'$gte':followers}}}
     unwind = {'$unwind': '$keywords'}
