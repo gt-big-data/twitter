@@ -28,7 +28,7 @@ tweets = db.tweet</code></pre>
 
 Examine the [MongoDB documentation](https://docs.mongodb.org/getting-started/python/query/)
 
-To return a tweet (refer to the 'sample' function if you need a random tweet):
+To return a tweet (refer to the '$sample' function if you need a random tweet):
 
 ```t = tweets.find_one()```
 
